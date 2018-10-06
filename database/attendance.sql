@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 27, 2018 at 04:29 AM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.2.0
+-- Host: localhost
+-- Generation Time: Oct 06, 2018 at 05:27 AM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -321,6 +321,7 @@ CREATE TABLE `user` (
   `id` int(20) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `username` varchar(250) NOT NULL,
   `password` varchar(50) NOT NULL,
   `role` varchar(50) NOT NULL,
   `code` varchar(50) DEFAULT NULL
@@ -330,40 +331,41 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `role`, `code`) VALUES
-(1, 'Ak Md Daniel Bin Pg Wahab', 'wbd02_01090018@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0216'),
-(2, 'Siti Raihana Binti Moksin', 'wbd02_01070815@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0235'),
-(3, 'Muhammad Syafi \'Aizzuddeen Bin kalali', 'wbd02_01076170@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0231'),
-(4, 'Khairunnisa binti Haji Zulkifli', 'wbd02_01111655@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0220'),
-(5, 'Izzatus Sakinah Binti Awang Masri', 'wbd02_01091598@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0219'),
-(6, 'Mohammad Hasif bin Matzin', '', '12345', 'student', 'DiICT(DME)/06/16/0285'),
-(7, 'Mohammad Dzul Iskandar bin Shamsol', '', '12345', 'student', 'DilCT(DME)/06/16/0283'),
-(8, 'Arvin ', '', '12345', 'student', 'DiICT(DME)/06/16/0279'),
-(9, 'Mohammad Firdaus bin Ahad', '', '12345', 'student', 'DiICT(DME)/06/16/0264'),
-(10, 'Muhammad Kamarul Arifin bin Haji Mazim', '', '12345', 'student', 'DiICT(DME)/06/16/0270'),
-(11, 'Hazimah Binti Sani', '', '12345', 'student', 'DiICT(LIC)/06/16/0238'),
-(12, 'Nurulain Haziqah Binti Alias', '', '12345', 'student', 'DiICT(LIC)/06/16/0249'),
-(13, 'Nur`Aisyah Binti Md Jarali', '', '12345', 'student', ' DiICT(LIC)/06/16/0244'),
-(14, 'Zainul Arifin Bin Hanipiah', '', '12345', 'student', 'DiICT(LIC)/06/16/0254'),
-(15, 'Hamizah bt Awang Mahmud', '', '12345', 'student', 'DiICT(LIC)/06/16/0251'),
-(16, 'Haziqah Hasyimah binti Hj Awg Omar', 'nws04_01091593@pb.edu.bn', '12345', 'student', 'DiICT(NWS)/06/16/0339'),
-(17, 'Lutfil Hadi Tajuddin ', '', '12345', 'student', 'DiICT(NWS)/06/16/0341'),
-(18, 'Mohammad Nazmi bin Moss ', '', '12345', 'student', 'DiICT(NWS)/06/16/0343'),
-(19, 'Nur Ain Syuhada bte Haji Miramit', '', '12345', 'student', 'DiICT(NWS)/06/16/0352'),
-(20, 'Nadhirah binti Haji Hassan', '', '12345', 'student', 'DiICT(NWS)/06/16/0351'),
-(21, 'Nurul Nabilah binti Ibrahim', ' ins02_01059815@pb.edu.bn', '12345', 'student', 'DiICT(INS)/06/16/0324'),
-(22, 'Nor Hayatul Syafiqah binti Mohamad', 'ins02_01047620@pb.edu.bn', '12345', 'student', 'DiICT(INS)/06/16/0319'),
-(23, 'Amal Syahirah binti Hj Mohd Salleh', 'ins02_01069009@pb.edu.bn', '12345', 'student', 'DiICT(INS)/06/16/0300'),
-(24, 'Woan Jinn Chong ', 'woan.jinn@pb.edu.bn', '12345', 'group coordinator', NULL),
-(25, 'Jamiatul Zuhriah Jamaluddin', 'jamiatul.zuhriah@pb.edu.bn', '12345', 'group coordinator', NULL),
-(26, 'Amanullah Soomro', 'amanullah.soomro@pb.edu.bn', '12345', 'group coordinator', NULL),
-(27, 'Haji Aziman Haji Mohammed', 'haji.aziman@pb.edu.bn', '12345', 'group coordinator', NULL),
-(28, 'Amal Umi Hafizah M Yusoff', 'amal.umi.hafizah@pb.edu.bn', '12345', 'group coordinator', NULL),
-(29, 'Mas Fatin Wahidah Mahdini', 'mas.fatin.wahidah@pb.edu.bn', '12345', 'module lecturer', NULL),
-(30, 'Atiqah Musfirah Leong Mohd Dennis Leong', 'atiqah.musfirah.leong@pb.edu.bn', '12345', 'module lecturer', NULL),
-(31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', '12345', 'module lecturer', NULL),
-(32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', '12345', 'module lecturer', NULL),
-(33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', '12345', 'module lecturer', NULL);
+INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code`) VALUES
+(1, 'Ak Md Daniel Bin Pg Wahab', 'wbd02_01090018@pb.edu.bn', 'wbd02_01090018', '12345', 'student', 'DiICT(WBD)/06/16/0216'),
+(2, 'Siti Raihana Binti Moksin', 'wbd02_01070815@pb.edu.bn', 'wbd02_01070815', '12345', 'student', 'DiICT(WBD)/06/16/0235'),
+(3, 'Muhammad Syafi \'Aizzuddeen Bin kalali', 'wbd02_01076170@pb.edu.bn', 'wbd02_01076170', '12345', 'student', 'DiICT(WBD)/06/16/0231'),
+(4, 'Khairunnisa binti Haji Zulkifli', 'wbd02_01111655@pb.edu.bn', 'wbd02_01111655', '12345', 'student', 'DiICT(WBD)/06/16/0220'),
+(5, 'Izzatus Sakinah Binti Awang Masri', 'wbd02_01091598@pb.edu.bn', 'wbd02_01091598', '12345', 'student', 'DiICT(WBD)/06/16/0219'),
+(6, 'Mohammad Hasif bin Matzin', 'dme02_01000001@pb.edu.bn', 'dme02_01000001', '12345', 'student', 'DiICT(DME)/06/16/0285'),
+(7, 'Mohammad Dzul Iskandar bin Shamsol', 'dme02_01000002@pb.edu.bn', 'dme02_01000002', '12345', 'student', 'DilCT(DME)/06/16/0283'),
+(8, 'Arvin ', 'dme02_01000003@pb.edu.bn', 'dme02_01000003', '12345', 'student', 'DiICT(DME)/06/16/0279'),
+(9, 'Mohammad Firdaus bin Ahad', 'dme02_01000004@pb.edu.bn', 'dme02_01000004', '12345', 'student', 'DiICT(DME)/06/16/0264'),
+(10, 'Muhammad Kamarul Arifin bin Haji Mazim', 'dme02_01000005@pb.edu.bn', 'dme02_01000005', '12345', 'student', 'DiICT(DME)/06/16/0270'),
+(11, 'Hazimah Binti Sani', 'lic02_01000006@pb.edu.bn', 'lic02_01000006', '12345', 'student', 'DiICT(LIC)/06/16/0238'),
+(12, 'Nurulain Haziqah Binti Alias', 'lic02_01000007@pb.edu.bn', 'lic02_01000007', '12345', 'student', 'DiICT(LIC)/06/16/0249'),
+(13, 'Nur`Aisyah Binti Md Jarali', 'lic02_01000008@pb.edu.bn', 'lic02_01000008', '12345', 'student', ' DiICT(LIC)/06/16/0244'),
+(14, 'Zainul Arifin Bin Hanipiah', 'lic02_01000009@pb.edu.bn', 'lic02_01000009', '12345', 'student', 'DiICT(LIC)/06/16/0254'),
+(15, 'Hamizah bt Awang Mahmud', 'lic02_010000010@pb.edu.bn', 'lic02_01000010', '12345', 'student', 'DiICT(LIC)/06/16/0251'),
+(16, 'Haziqah Hasyimah binti Hj Awg Omar', 'nws04_01091593@pb.edu.bn', 'nws04_01091593', '12345', 'student', 'DiICT(NWS)/06/16/0339'),
+(17, 'Lutfil Hadi Tajuddin ', 'nws04_01000011@pb.edu.bn', 'nws04_01000011', '12345', 'student', 'DiICT(NWS)/06/16/0341'),
+(18, 'Mohammad Nazmi bin Moss ', 'nws04_01000012@pb.edu.bn', 'nws04_01000012', '12345', 'student', 'DiICT(NWS)/06/16/0343'),
+(19, 'Nur Ain Syuhada bte Haji Miramit', 'nws04_01000013@pb.edu.bn', 'nws04_01000013', '12345', 'student', 'DiICT(NWS)/06/16/0352'),
+(20, 'Nadhirah binti Haji Hassan', 'nws04_01000014@pb.edu.bn', 'nws04_01000014', '12345', 'student', 'DiICT(NWS)/06/16/0351'),
+(21, 'Nurul Nabilah binti Ibrahim', 'ins02_01059815@pb.edu.bn', 'ins02_01059815', '12345', 'student', 'DiICT(INS)/06/16/0324'),
+(22, 'Nor Hayatul Syafiqah binti Mohamad', 'ins02_01047620@pb.edu.bn', 'ins02_01047620', '12345', 'student', 'DiICT(INS)/06/16/0319'),
+(23, 'Amal Syahirah binti Hj Mohd Salleh', 'ins02_01069009@pb.edu.bn', 'ins02_01069009', '12345', 'student', 'DiICT(INS)/06/16/0300'),
+(24, 'Woan Jinn Chong ', 'woan.jinn@pb.edu.bn', 'woanjinn', '12345', 'group coordinator', NULL),
+(25, 'Jamiatul Zuhriah Jamaluddin', 'jamiatul.zuhriah@pb.edu.bn', 'jamiatulzuhriah', '12345', 'group coordinator', NULL),
+(26, 'Amanullah Soomro', 'amanullah.soomro@pb.edu.bn', 'amanullahsoomro', '12345', 'group coordinator', NULL),
+(27, 'Haji Aziman Haji Mohammed', 'haji.aziman@pb.edu.bn', 'hajiaziman', '12345', 'group coordinator', NULL),
+(28, 'Amal Umi Hafizah M Yusoff', 'amal.umi.hafizah@pb.edu.bn', 'amalumihafizah', '12345', 'group coordinator', NULL),
+(29, 'Mas Fatin Wahidah Mahdini', 'mas.fatin.wahidah@pb.edu.bn', 'masfatinwahidah', '12345', 'module lecturer', NULL),
+(30, 'Atiqah Musfirah Leong Mohd Dennis Leong', 'atiqah.musfirah.leong@pb.edu.bn', 'atiqahmusfirahleong', '12345', 'module lecturer', NULL),
+(31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', 'hajisiramlee', '12345', 'module lecturer', NULL),
+(32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', 'bahithamid', '12345', 'module lecturer', NULL),
+(33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', 'suoklenghii', '12345', 'module lecturer', NULL),
+(34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'Module Lecturer', '');
 
 --
 -- Indexes for dumped tables
@@ -546,7 +548,7 @@ ALTER TABLE `statistic`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Constraints for dumped tables
