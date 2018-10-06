@@ -38,10 +38,18 @@ include('function.php');
         <!-- Detail -->
         <div class="box-B">
             <table class="detail">
-                <tr>
-                    <td>Group:</td>
-                    <td>DiICT(WBD)0216/02</td>
-                </tr>   
+                <?php
+                $query = 'SELECT * FROM user WHERE username="'.$_SESSION['username'].'"';
+                $run_query = mysqli_query($connection, $query);
+                ?>
+                <?php
+                    foreach($run_query as $user){
+                        echo"<tr>
+                                <td>Group:</td>
+                                <td><p>".$user['code']."</p></td>
+                            </tr>";
+                    }
+                ?>   
                 <tr>
                     <td>Lecturer:</td>
                     <td>Ms. Azu</td>
@@ -66,6 +74,7 @@ include('function.php');
                     </td>
                 </tr>
             </table>
+            
         </div>
 
         <!-- Detail -->
