@@ -1,0 +1,622 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 27, 2018 at 04:29 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `attendance`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attendance`
+--
+
+CREATE TABLE `attendance` (
+  `id` int(20) NOT NULL,
+  `session_id` int(20) NOT NULL,
+  `verify` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `attendance`
+--
+
+INSERT INTO `attendance` (`id`, `session_id`, `verify`) VALUES
+(1, 13, 'verified '),
+(2, 14, 'verified'),
+(3, 11, 'not verified'),
+(4, 12, 'verified');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attendance_status`
+--
+
+CREATE TABLE `attendance_status` (
+  `id` int(20) NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `attendance_id` int(20) NOT NULL,
+  `remarks` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `attendance_status`
+--
+
+INSERT INTO `attendance_status` (`id`, `user_id`, `status`, `attendance_id`, `remarks`) VALUES
+(1, 1, 'absent', 3, 'no mc letter'),
+(2, 23, 'present', 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course`
+--
+
+CREATE TABLE `course` (
+  `id` int(20) NOT NULL,
+  `course_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course`
+--
+
+INSERT INTO `course` (`id`, `course_name`) VALUES
+(1, 'WBD'),
+(2, 'INS'),
+(3, 'NWS'),
+(4, 'DME'),
+(5, 'LIC');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_student`
+--
+
+CREATE TABLE `course_student` (
+  `id` int(20) NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `course_id` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course_student`
+--
+
+INSERT INTO `course_student` (`id`, `user_id`, `course_id`) VALUES
+(1, 1, 1),
+(2, 5, 1),
+(3, 4, 1),
+(4, 3, 1),
+(5, 2, 1),
+(6, 6, 4),
+(7, 7, 4),
+(8, 9, 4),
+(9, 8, 4),
+(10, 10, 4),
+(11, 11, 5),
+(12, 12, 5),
+(13, 13, 5),
+(14, 15, 5),
+(15, 14, 5),
+(16, 19, 3),
+(17, 16, 3),
+(18, 17, 3),
+(19, 18, 3),
+(20, 20, 3),
+(21, 23, 2),
+(22, 22, 2),
+(23, 21, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gc`
+--
+
+CREATE TABLE `gc` (
+  `id` int(20) NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `group_id` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gc`
+--
+
+INSERT INTO `gc` (`id`, `user_id`, `group_id`) VALUES
+(1, 25, 1),
+(2, 27, 4),
+(3, 26, 2),
+(4, 28, 3),
+(5, 24, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gl`
+--
+
+CREATE TABLE `gl` (
+  `id` int(20) NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `group_id` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gl`
+--
+
+INSERT INTO `gl` (`id`, `user_id`, `group_id`) VALUES
+(1, 23, 2),
+(2, 16, 4),
+(3, 5, 1),
+(4, 17, 3),
+(5, 8, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `group`
+--
+
+CREATE TABLE `group` (
+  `id` int(20) NOT NULL,
+  `group_code` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `group`
+--
+
+INSERT INTO `group` (`id`, `group_code`) VALUES
+(1, 'DiICT(WBD)0216/02'),
+(2, 'DiICT(INS)0216/02'),
+(3, 'DiICT(LIC)0216/02'),
+(4, 'DiICT(NWS)0216/02'),
+(5, 'DiICT(DME)0216/02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `group_student`
+--
+
+CREATE TABLE `group_student` (
+  `id` int(20) NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `group_id` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `group_student`
+--
+
+INSERT INTO `group_student` (`id`, `user_id`, `group_id`) VALUES
+(1, 1, 1),
+(2, 6, 5),
+(3, 22, 2),
+(4, 20, 4),
+(5, 14, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ml`
+--
+
+CREATE TABLE `ml` (
+  `id` int(20) NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `group_id` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ml`
+--
+
+INSERT INTO `ml` (`id`, `user_id`, `group_id`) VALUES
+(1, 33, 1),
+(2, 32, 4),
+(3, 31, 3),
+(4, 30, 2),
+(5, 29, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `session`
+--
+
+CREATE TABLE `session` (
+  `id` int(20) NOT NULL,
+  `date` date NOT NULL,
+  `group_id` int(20) NOT NULL,
+  `course_id` int(20) NOT NULL,
+  `slot_id` int(20) NOT NULL,
+  `room` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `session`
+--
+
+INSERT INTO `session` (`id`, `date`, `group_id`, `course_id`, `slot_id`, `room`) VALUES
+(11, '2018-09-25', 1, 1, 2, '6.03'),
+(12, '2018-09-26', 3, 5, 4, '6.04'),
+(13, '2018-09-27', 2, 2, 4, '9.02'),
+(14, '2018-09-24', 4, 3, 2, '6.04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slot`
+--
+
+CREATE TABLE `slot` (
+  `id` int(20) NOT NULL,
+  `time` varchar(50) NOT NULL,
+  `slot_no` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `slot`
+--
+
+INSERT INTO `slot` (`id`, `time`, `slot_no`) VALUES
+(1, '8.00AM-10.00AM', '1'),
+(2, '10.30AM-12.00PM', '2'),
+(3, '01.00PM-02.30PM', '3'),
+(4, '02.30PM-04.30PM', '4');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `statistic`
+--
+
+CREATE TABLE `statistic` (
+  `id` int(20) NOT NULL,
+  `user_id` int(20) NOT NULL,
+  `attendance_id` int(20) NOT NULL,
+  `course_id` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `statistic`
+--
+
+INSERT INTO `statistic` (`id`, `user_id`, `attendance_id`, `course_id`) VALUES
+(1, 1, 3, 1),
+(2, 23, 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(20) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `role` varchar(50) NOT NULL,
+  `code` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `role`, `code`) VALUES
+(1, 'Ak Md Daniel Bin Pg Wahab', 'wbd02_01090018@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0216'),
+(2, 'Siti Raihana Binti Moksin', 'wbd02_01070815@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0235'),
+(3, 'Muhammad Syafi \'Aizzuddeen Bin kalali', 'wbd02_01076170@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0231'),
+(4, 'Khairunnisa binti Haji Zulkifli', 'wbd02_01111655@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0220'),
+(5, 'Izzatus Sakinah Binti Awang Masri', 'wbd02_01091598@pb.edu.bn', '12345', 'student', 'DiICT(WBD)/06/16/0219'),
+(6, 'Mohammad Hasif bin Matzin', '', '12345', 'student', 'DiICT(DME)/06/16/0285'),
+(7, 'Mohammad Dzul Iskandar bin Shamsol', '', '12345', 'student', 'DilCT(DME)/06/16/0283'),
+(8, 'Arvin ', '', '12345', 'student', 'DiICT(DME)/06/16/0279'),
+(9, 'Mohammad Firdaus bin Ahad', '', '12345', 'student', 'DiICT(DME)/06/16/0264'),
+(10, 'Muhammad Kamarul Arifin bin Haji Mazim', '', '12345', 'student', 'DiICT(DME)/06/16/0270'),
+(11, 'Hazimah Binti Sani', '', '12345', 'student', 'DiICT(LIC)/06/16/0238'),
+(12, 'Nurulain Haziqah Binti Alias', '', '12345', 'student', 'DiICT(LIC)/06/16/0249'),
+(13, 'Nur`Aisyah Binti Md Jarali', '', '12345', 'student', ' DiICT(LIC)/06/16/0244'),
+(14, 'Zainul Arifin Bin Hanipiah', '', '12345', 'student', 'DiICT(LIC)/06/16/0254'),
+(15, 'Hamizah bt Awang Mahmud', '', '12345', 'student', 'DiICT(LIC)/06/16/0251'),
+(16, 'Haziqah Hasyimah binti Hj Awg Omar', 'nws04_01091593@pb.edu.bn', '12345', 'student', 'DiICT(NWS)/06/16/0339'),
+(17, 'Lutfil Hadi Tajuddin ', '', '12345', 'student', 'DiICT(NWS)/06/16/0341'),
+(18, 'Mohammad Nazmi bin Moss ', '', '12345', 'student', 'DiICT(NWS)/06/16/0343'),
+(19, 'Nur Ain Syuhada bte Haji Miramit', '', '12345', 'student', 'DiICT(NWS)/06/16/0352'),
+(20, 'Nadhirah binti Haji Hassan', '', '12345', 'student', 'DiICT(NWS)/06/16/0351'),
+(21, 'Nurul Nabilah binti Ibrahim', ' ins02_01059815@pb.edu.bn', '12345', 'student', 'DiICT(INS)/06/16/0324'),
+(22, 'Nor Hayatul Syafiqah binti Mohamad', 'ins02_01047620@pb.edu.bn', '12345', 'student', 'DiICT(INS)/06/16/0319'),
+(23, 'Amal Syahirah binti Hj Mohd Salleh', 'ins02_01069009@pb.edu.bn', '12345', 'student', 'DiICT(INS)/06/16/0300'),
+(24, 'Woan Jinn Chong ', 'woan.jinn@pb.edu.bn', '12345', 'group coordinator', NULL),
+(25, 'Jamiatul Zuhriah Jamaluddin', 'jamiatul.zuhriah@pb.edu.bn', '12345', 'group coordinator', NULL),
+(26, 'Amanullah Soomro', 'amanullah.soomro@pb.edu.bn', '12345', 'group coordinator', NULL),
+(27, 'Haji Aziman Haji Mohammed', 'haji.aziman@pb.edu.bn', '12345', 'group coordinator', NULL),
+(28, 'Amal Umi Hafizah M Yusoff', 'amal.umi.hafizah@pb.edu.bn', '12345', 'group coordinator', NULL),
+(29, 'Mas Fatin Wahidah Mahdini', 'mas.fatin.wahidah@pb.edu.bn', '12345', 'module lecturer', NULL),
+(30, 'Atiqah Musfirah Leong Mohd Dennis Leong', 'atiqah.musfirah.leong@pb.edu.bn', '12345', 'module lecturer', NULL),
+(31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', '12345', 'module lecturer', NULL),
+(32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', '12345', 'module lecturer', NULL),
+(33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', '12345', 'module lecturer', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `attendance`
+--
+ALTER TABLE `attendance`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `session_id` (`session_id`);
+
+--
+-- Indexes for table `attendance_status`
+--
+ALTER TABLE `attendance_status`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `attendance_id` (`attendance_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `course`
+--
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `course_student`
+--
+ALTER TABLE `course_student`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `group_id` (`course_id`);
+
+--
+-- Indexes for table `gc`
+--
+ALTER TABLE `gc`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `group_id` (`group_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `gl`
+--
+ALTER TABLE `gl`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `group_id` (`group_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `group`
+--
+ALTER TABLE `group`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `group_student`
+--
+ALTER TABLE `group_student`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `group_id` (`group_id`);
+
+--
+-- Indexes for table `ml`
+--
+ALTER TABLE `ml`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `group_id` (`group_id`);
+
+--
+-- Indexes for table `session`
+--
+ALTER TABLE `session`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `group_id` (`group_id`),
+  ADD KEY `course_id` (`course_id`),
+  ADD KEY `slot_id` (`slot_id`);
+
+--
+-- Indexes for table `slot`
+--
+ALTER TABLE `slot`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `statistic`
+--
+ALTER TABLE `statistic`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `attendance_id` (`attendance_id`),
+  ADD KEY `course_id` (`course_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `attendance`
+--
+ALTER TABLE `attendance`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `attendance_status`
+--
+ALTER TABLE `attendance_status`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `course`
+--
+ALTER TABLE `course`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `course_student`
+--
+ALTER TABLE `course_student`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `gc`
+--
+ALTER TABLE `gc`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `gl`
+--
+ALTER TABLE `gl`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `group`
+--
+ALTER TABLE `group`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `group_student`
+--
+ALTER TABLE `group_student`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `ml`
+--
+ALTER TABLE `ml`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `session`
+--
+ALTER TABLE `session`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `slot`
+--
+ALTER TABLE `slot`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `statistic`
+--
+ALTER TABLE `statistic`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `attendance`
+--
+ALTER TABLE `attendance`
+  ADD CONSTRAINT `attendance_ibfk_1` FOREIGN KEY (`session_id`) REFERENCES `session` (`id`);
+
+--
+-- Constraints for table `attendance_status`
+--
+ALTER TABLE `attendance_status`
+  ADD CONSTRAINT `attendance_status_ibfk_1` FOREIGN KEY (`attendance_id`) REFERENCES `attendance` (`id`),
+  ADD CONSTRAINT `attendance_status_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Constraints for table `course_student`
+--
+ALTER TABLE `course_student`
+  ADD CONSTRAINT `course_student_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`),
+  ADD CONSTRAINT `course_student_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Constraints for table `gc`
+--
+ALTER TABLE `gc`
+  ADD CONSTRAINT `gc_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `gc_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+
+--
+-- Constraints for table `gl`
+--
+ALTER TABLE `gl`
+  ADD CONSTRAINT `gl_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `gl_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+
+--
+-- Constraints for table `group_student`
+--
+ALTER TABLE `group_student`
+  ADD CONSTRAINT `group_student_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `group_student_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+
+--
+-- Constraints for table `ml`
+--
+ALTER TABLE `ml`
+  ADD CONSTRAINT `ml_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `ml_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+
+--
+-- Constraints for table `session`
+--
+ALTER TABLE `session`
+  ADD CONSTRAINT `session_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`),
+  ADD CONSTRAINT `session_ibfk_2` FOREIGN KEY (`slot_id`) REFERENCES `slot` (`id`),
+  ADD CONSTRAINT `session_ibfk_3` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+
+--
+-- Constraints for table `statistic`
+--
+ALTER TABLE `statistic`
+  ADD CONSTRAINT `statistic_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `statistic_ibfk_2` FOREIGN KEY (`attendance_id`) REFERENCES `attendance` (`id`),
+  ADD CONSTRAINT `statistic_ibfk_3` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

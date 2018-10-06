@@ -1,0 +1,934 @@
+html, body {
+    
+    color: #636b6f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+#body{
+    background-color: #FF5A74;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: left;
+}
+
+
+.title {
+    font-size: 25px;
+    color: #64A2DB;
+}
+
+.m-b-md {
+    margin: 150px 0px 0px 80px;
+}
+
+.sch{
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0px 0px 0px 80px;
+    color: #FF5A74;
+}
+
+#rotate{
+    border-top: 1000px solid transparent;
+    border-left: 600px solid #81C8CE;
+    border-bottom: 800px solid transparent;
+    position: fixed;
+    left: 0px;
+
+}
+
+#glass{
+    position: absolute;
+    margin: 0 0 0 0;
+    width: 96%;
+    height: 94%;
+    background-color: #ffffff;  
+}
+
+#image{
+    position: fixed;
+    left: 45%;
+    top: 90px;
+
+}
+
+
+.form{
+    width: 35%;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #857E7E;
+}
+
+
+.u{
+    margin: 70px 0 0 80px;
+}
+
+.p{
+    margin: 40px 0 0 80px;
+}
+
+.control{
+    color: #857E7E;
+    border: none;
+    border-radius: 0;
+    margin-top: 3px;
+    padding: 9px 0;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+    content: "";
+    background-color: transparent;
+}
+
+.me{
+    margin: 50px 0 0 80px;
+}
+
+input.btn1[type="submit"]{
+    position: absolute;
+    background: #FF5A74;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 80%;
+    margin: 30px 0 0 20%;
+    padding: 10px;
+    width: 15%;
+    outline: medium none;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.text-f{
+    margin: 30px 0px 0px 80px;
+    color: #64A2DB;
+    font-size: 16px;
+}
+
+.text-c{
+    color: #857E7E;
+}
+
+
+/*forget*/
+
+
+html, body {
+    
+    color: #636b6f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+#body1{
+    background-color: #F6F6F5;
+}
+
+
+.content {
+    text-align: left;
+
+}
+.box {
+    position:fixed;
+}
+
+.m {
+    margin: 250px 0px 0px 200px;
+}
+
+.get {
+    
+    font-size: 36px;
+    color: #81C8CE;
+    font-weight: bold;
+}
+
+.col{
+    color: #FF5A74;
+}
+
+.col1{
+    color: #81C8CE;
+}
+
+.sml {
+    position: absolute;
+    font-size: 16px;
+    width: 60%;
+    word-wrap: break-word;
+    
+}
+
+.size{
+    margin: 20px 0px 0px 200px;
+}
+
+.size1{
+    margin: 140px 0px 0px 200px;
+
+}
+
+#bg{
+    position: fixed;
+    top: -80px;
+    left: 50px;
+    opacity: 0.1;
+    
+}
+
+.form-group{
+    position: absolute;
+    margin: 160px 0px 0px 200px;
+    width: 65%;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #FF5A74;
+}
+
+.form-control {
+    color:#FF5A74;
+    border: none;
+    border-radius: 0;
+    margin-top: 3px;
+    padding: 9px 0;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+    content: "";
+    background-color: transparent;
+}
+
+input.btn[type="submit"]{
+    position: absolute;
+    background: #81C8CE;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 80%;
+    margin: 270px 0px 0px 345px;
+    padding: 10px;
+    width: 35%;
+    outline: medium none;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+#a{
+    position: absolute;
+    margin: 350px 0px 0px 220px;
+    color: #81C8CE;
+    font-size: 16px;
+}
+
+.pic{
+    position: absolute;
+    margin: 352px 0px 0px 200px;
+}
+
+/*STUDENTreport*/
+html, body {
+background-color: #F6F6F5;
+color: #636b6f;
+font-family: Roboto, bold;
+font-weight: 100;
+height: 100vh;
+margin: 0;
+max-width: 100%;
+overflow-x: hidden;
+}
+
+/* The sidebar menu */
+.sidenav {
+height: 100%; /* Full-height: remove this if you want "auto" height */
+width: 200px; /* Set the width of the sidebar */
+position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+z-index: 1; /* Stay on top */
+top: 0; /* Stay at the top */
+left: 0;
+background-color: #FF5A74; /* Pink red */
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 40px;
+}
+
+.PB {
+padding: 10px 10px 10px 60px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold;
+font-size: 14px;
+position: relative;
+top:-110px;
+
+}
+
+/* The navigation menu links */
+.sidenav a {
+padding: 20px 20px 20px 40px;
+text-decoration: none;
+font-size: 13px;
+font-family: Roboto;
+color: #FFFFFF;
+display: block;
+position: relative;
+top: -80px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+color: #FF5A74;
+font-weight: bold;
+background-color: #F6F6F5;
+
+}
+
+/* Style page content */
+.main {
+margin-left: 160px; /* Same as the width of the sidebar */
+padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+.header-box {
+margin-left: 200px;
+position: relative;
+padding-top: 5px;
+width: 100%;
+height:80px;
+background-color: #FFFFFF;
+box-shadow: 2px 2px 2px #A09E9E;
+}
+
+.dashboardtext {
+position: relative;
+top: -15px;
+padding-left: 20px;
+color:#81C8CE;
+font-family: Roboto;
+font-weight:bold;
+}
+
+.logout-box {
+position: relative;
+left: 900px;
+top: 10px;
+background-color: #F6F6F5;
+width: 150px;
+height: 40px;
+
+}
+
+.username {
+position: relative;
+left: 20px;
+top: 5px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;
+}
+
+.user-status {
+position: relative;
+left: 20px;
+top: -5px;
+color: #18BBD5;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 8px;
+}
+
+.studentdetail{
+margin: 15px;
+width: 380px;
+height: 200px;
+}
+
+.box-A {
+position: relative;
+left: 250px;
+top: 30px;
+background-color: #FFFFFF;
+width: 1095px;
+height: 180px;
+
+}
+
+.box-B {
+position: relative;
+left: 250px;
+top: 30px;
+bottom: 30px;
+background-color: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+width: 400px;
+height: 200px;
+
+}
+
+.box-C {
+margin: 5px;
+padding: 5px;
+position: relative;
+left: 1064px;
+top: 30px;
+background-color: #FFFFFF;
+width: 250px;
+height: 40px;
+
+}
+
+.box {
+position: relative;
+left: 250px;
+top: 30px;
+width: 900px;
+height: 20px;
+
+}
+
+.A-heading {
+position: relative;
+left: 40px;
+top: 105px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 18px;  
+}
+
+.A-subheading {
+position: relative;
+left: 40px;
+top: 90px;
+color: #736E6E;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold; 
+font-size: 10px;  
+}
+
+.box-Aa {
+position: relative;
+left: 0px;
+top: 160px;
+background-color: #43D0BE;
+width: 280px;
+height: 60px;
+
+}
+
+.A-btext {
+position: relative;
+left: 100px;
+top: 25px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;  
+}
+
+.img {
+position: relative;
+top: -34px;
+left: 15px;
+
+}
+
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+padding: 8px;
+text-align: left;
+}
+
+tr:nth-child(even) {
+background-color: #eee;
+border: 1px solid #eee;
+}
+
+input {
+cursor: pointer;
+}
+
+.plea{
+text-align: center;
+}
+
+/*PROFILE*/
+html, body {
+background-color: #F6F6F5;
+color: #636b6f;
+font-family: Roboto, bold;
+font-weight: 100;
+height: 100vh;
+margin: 0;
+max-width: 100%;
+overflow-x: hidden;
+}
+
+.PB {
+padding: 10px 10px 10px 60px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold;
+font-size: 14px;
+position: relative;
+top:-110px;
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+color: #FF5A74;
+font-weight: bold;
+background-color: #F6F6F5;
+}
+
+.sidenav a.current {      /* THIS ONE UNTUK HIGHLIGHT CURRENT PAGE ++++++++++++++++++++++++++++++++++++++++*/
+color: #FF5A74;
+font-weight: bold;
+background-color: #F6F6F5;
+
+} 
+
+/* Style page content */
+.main {
+margin-left: 160px; /* Same as the width of the sidebar */
+padding: 0px 10px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+.header-box {
+margin-left: 200px;
+position: relative;
+padding-top: 5px;
+width: 100%;
+height:80px;
+max-width: 100%;
+background-color: #FFFFFF;
+box-shadow: 2px 2px 2px #A09E9E;
+}
+.dashboardtext {
+position: relative;
+top: -15px;
+padding-left: 20px;
+color: #D6D4D4;
+font-family: Roboto;
+font-weight:bold;
+}
+.profiletext {
+position: absolute;
+top: 42px;
+left: 133px;
+color: #81C8CE;
+font-family: Roboto;
+font-weight:bold;
+}
+.text {
+position: absolute;
+top: 85px;
+left: 20px;
+color: #565353;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+}
+
+.username {
+position: relative;
+left: 20px;
+top: 5px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;
+}
+.user-status {
+position: relative;
+left: 20px;
+top: -5px;
+color: #18BBD5;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 8px;
+}
+.img {
+position: relative;
+top: -34px;
+left: 15px;
+
+}
+.img-sort {
+position: absolute;
+top: 43px;
+left: 1030px;
+}
+.status {
+position: absolute;
+top: 130px;
+left: 50px;
+color: #FF5A74;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+
+}
+.student {
+position: absolute;
+top: 150px;
+left: 50px;
+color: #81C8CE;
+font-family: Roboto;
+font-weight:bold;
+font-style: italic;
+font-size: 13px;
+}
+
+.userstudent {
+position: absolute;
+top: -22px;
+left: 10px;
+color:#FF5A74;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+background-color: #F6F6F5; 
+}
+
+.userbox {
+position: absolute;
+top: 220px;
+left: 50px;
+border: 1px solid #81C8CE;
+border-radius: 25px;
+width: 550px;
+height: 50px;
+box-shadow: 3px 3px 3px #C4C4C4;
+}
+
+.userstudent {
+position: absolute;
+top: -22px;
+left: 10px;
+color:#FF5A74;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+background-color: #F6F6F5; 
+}
+.B {
+position: absolute;
+top: 90px;
+}
+.copy {
+position: absolute;
+top: 260px;
+}
+.copy1 {
+position: absolute;
+top: 330px;
+}
+
+.C {
+position: absolute;
+top: 330px;
+}
+.D {
+position: absolute;
+top: 420px;  
+}
+
+.save {
+position: absolute;
+top: px;
+left: 60px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px; 
+}
+.save-btn {
+position: absolute;
+left: 220px;
+top: 750px;
+background-color: #81C8CE;
+width: 200px;
+height: 40px;
+margin-bottom: 150px;  
+}
+
+.organize {
+position: absolute;
+left: 400px;
+
+}
+
+/* Dropdown*/
+.dropdown{
+left: 30px;
+}
+
+#img-sort {
+position: absolute;
+top: 43px;
+left: 1030px;
+}
+
+.logout-box {
+position: relative;
+left: 900px;
+top: 10px;
+background-color: #F6F6F5;
+width: 150px;
+height: 40px;
+
+}
+
+.dropdown{
+left: 30px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+left: 900px;
+top: 65px;
+background-color: #F6F6F5;
+min-width: 150px;
+overflow: auto;
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+font-size: 12px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown a:hover {background-color: #FF5A74;}
+
+.show {display: block;}
+
+/*DASHBOARD*/
+.box-profile {
+position: relative;
+left: 250px;
+top: 30px;
+background-color: #FFFFFF;
+width: 280px;
+height: 280px;
+}
+
+.profile-heading {
+position: relative;
+left: 40px;
+top: 105px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 18px;  
+}
+
+.profile-subheading {
+position: relative;
+left: 40px;
+top: 90px;
+color: #736E6E;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold; 
+font-size: 10px;  
+}
+
+.box-profileA {
+position: relative;
+left: 0px;
+top: 160px;
+background-color: #43D0BE;
+width: 280px;
+height: 60px;
+}
+
+.A-btext {
+position: relative;
+left: 100px;
+top: 25px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;  
+}
+
+.box-report {
+position: absolute;
+left: 560px;
+top: 132px;
+background-color: #FFFFFF;
+width: 280px;
+height: 280px;
+}
+
+.report-heading {
+position: relative;
+left: 40px;
+top: 90px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 18px;  
+}
+
+.report-subheading {
+position: relative;
+left: 40px;
+top: 75px;
+color: #736E6E;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold; 
+font-size: 10px;  
+}
+
+.box-reportA {
+position: relative;
+left: 0px;
+top: 142px;
+background-color: #8C64CC;
+width: 280px;
+height: 60px;
+}
+
+.B-btext {
+position: relative;
+left: 75px;
+top: 25px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;  
+}
+
+.box-nominate {
+    position: absolute;
+    left: 560px;
+    top: 132px;
+    background-color: #FFFFFF;
+    width: 280px;
+    height: 280px;
+    
+}
+.nominate-heading {
+    position: relative;
+    left: 40px;
+    top: 90px;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 18px;  
+}
+.nominate-subheading {
+    position: relative;
+    left: 40px;
+    top: 75px;
+    color: #736E6E;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 10px;  
+}
+.box-nominateA {
+    position: relative;
+    left: 0px;
+    top: 142px;
+    background-color: #FF6C44;
+    width: 280px;
+    height: 60px;
+    
+}
+.C-ctext {
+   position: relative;
+    left: 85px;
+    top: 25px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 12px;  
+}
+
+/*ATTENDANCE*/
+
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+    border: 1px solid #eee;
+}
+
+input {
+    cursor: pointer;
+}
+
+.plea{
+    text-align: center;
+}
+
+select{
+    width: 150px;
+}
+
