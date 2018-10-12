@@ -380,7 +380,7 @@ height: 200px;
 
 .box-A {
 position: relative;
-left: 250px;
+left: 230px;
 top: 30px;
 background-color: #FFFFFF;
 width: 1095px;
@@ -390,7 +390,7 @@ height: 180px;
 
 .box-B {
 position: relative;
-left: 250px;
+left: 230px;
 top: 30px;
 bottom: 30px;
 background-color: #FFFFFF;
@@ -408,7 +408,7 @@ left: 1064px;
 top: 30px;
 background-color: #FFFFFF;
 width: 250px;
-height: 40px;
+height: 150px;
 
 }
 

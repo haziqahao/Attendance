@@ -7,7 +7,7 @@ include('function.php');
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Laravel</title>
 
@@ -43,10 +43,10 @@ include('function.php');
                 $run_query = mysqli_query($connection, $query);
                 ?>
                 <?php
-                    foreach($run_query as $user){
+                    foreach($run_query as $users){
                         echo"<tr>
                                 <td>Group:</td>
-                                <td><p>".$user['code']."</p></td>
+                                <td><p>".$users['code']."</p></td>
                             </tr>";
                     }
                 ?>   
