@@ -1,5 +1,4 @@
 html, body {
-    
     color: #636b6f;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
@@ -139,8 +138,6 @@ input.btn1[type="submit"]{
 
 
 /*forget*/
-
-
 html, body {
     
     color: #636b6f;
@@ -692,6 +689,7 @@ font-family: Roboto;
 font-weight:bold;
 font-size: 13px; 
 }
+
 .save-btn {
 position: absolute;
 left: 220px;
@@ -700,6 +698,26 @@ background-color: #81C8CE;
 width: 200px;
 height: 40px;
 margin-bottom: 150px;  
+}
+
+.edit {
+position: absolute;
+top: px;
+left: 60px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px; 
+}
+
+.edit-btn {
+position: absolute;
+left: 220px;
+top: 750px;
+background-color: #81C8CE;
+width: 200px;
+height: 40px;
+margin-bottom:150px;  
 }
 
 .organize {
@@ -857,7 +875,7 @@ font-size: 12px;
 
 .box-nominate {
     position: absolute;
-    left: 560px;
+    left: 870px;
     top: 132px;
     background-color: #FFFFFF;
     width: 280px;
@@ -902,6 +920,226 @@ font-size: 12px;
     font-size: 12px;  
 }
 
+.box-session {
+position: absolute;
+left: 250px;
+top: 450px;
+background-color: #FFFFFF;
+width: 280px;
+height: 280px;
+padding-bottom: 50px;
+
+}
+.session-heading {
+position: relative;
+left: 40px;
+top: 90px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 18px;  
+}
+.session-subheading {
+position: relative;
+left: 40px;
+top: 75px;
+color: #736E6E;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold; 
+font-size: 10px;  
+}
+.box-sessionA {
+position: relative;
+left: 0px;
+top: 142px;
+background-color: #18BBD5;
+width: 280px;
+height: 60px;
+
+}
+.D-btext {
+position: relative;
+left: 90px;
+top: 25px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;  
+}
+
+.box-ml {
+position: absolute;
+left: 560px;
+top: 450px;
+background-color: #FFFFFF;
+width: 280px;
+height: 280px;
+padding-bottom: 50px;
+
+}
+.ml-heading {
+position: relative;
+left: 40px;
+top: 90px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 18px;  
+}
+.ml-subheading {
+position: relative;
+left: 40px;
+top: 75px;
+color: #736E6E;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold; 
+font-size: 10px;  
+}
+.box-mlA {
+position: relative;
+left: 0px;
+top: 142px;
+background-color: #E56CB5;
+width: 280px;
+height: 60px;
+
+}
+.D-btext {
+position: relative;
+left: 90px;
+top: 25px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;  
+}
+
+/*SCHEDULE*/
+.box-class {
+    position: relative;
+    left: 450px;
+    top: 73px;
+    background-color: #FFFFFF;
+    width: 246px;
+    height: 193px;
+    
+}
+
+.A-heading {
+    text-align: center;
+    position: relative;
+    top: 35px;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 14px;  
+}
+
+
+.boxa {
+    background-color: #43D0BE;
+    width: 246px;
+    height: 10px;
+    
+}
+
+.A-btext {
+   
+    left: 100px;
+    top: 25px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 12px;  
+}
+
+img{
+    position: relative;
+    top: -34px;
+    left: 15px;
+}
+
+#image-1 {
+    position: relative;
+    top: 75px;
+    left: 66px;
+ 
+}
+
+#image-2 {
+    position: relative;
+    top: 50px;
+    left: 85px;
+ 
+}
+
+#img-sort {
+    position: absolute;
+    top: 43px;
+    left: 1030px;
+}
+
+.box-lecture {
+    position: relative;
+    left: 720px;
+    top: -120px;
+    background-color: #9CDFD6;
+    width: 246px;
+    height: 193px;
+    
+}
+
+.box-lecture:hover {
+    color: #FF5A74;
+    font-weight: bold;
+    background-color: #FFFFFF;
+
+}
+
+.B-heading {
+    text-align: center;
+    position: relative;
+    top: 45px;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: 14px;  
+}
+
+.box-organize {
+    position: relative;
+    left: 90px;
+}
+
+/* Table*/
+.table-organize {
+    font-family: 'roboto';
+    border-collapse: collapse;
+    width: 80%;
+    align-items: center;
+    margin: -50px 0 0 240px;
+    font-size: 12px;
+}
+
+
+td, th {
+    text-align: center;
+    padding: 10px;
+    height: 30px;
+   
+}
+
+
+tr:nth-child(even) {
+    background-color: #ECECEC;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
 /*ATTENDANCE*/
 
 table {
@@ -932,3 +1170,388 @@ select{
     width: 150px;
 }
 
+/*NOMINATE*/
+/* Style page content */
+.main {
+margin-left: 160px; /* Same as the width of the sidebar */
+padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+.header-box {
+margin-left: 200px;
+position: relative;
+padding-top: 5px;
+width: 100%;
+height:80px;
+max-width: 100%;
+background-color: #FFFFFF;
+box-shadow: 2px 2px 2px #A09E9E;
+}
+
+.dashboardtext {
+position: relative;
+top: -15px;
+padding-left: 20px;
+color: #D6D4D4;
+font-family: Roboto;
+font-weight:bold;
+}
+
+.attendanceincharge {
+position: absolute;
+top: 42px;
+left: 133px;
+color: #81C8CE;
+font-family: Roboto;
+font-weight:bold;
+}
+
+.text {
+position: absolute;
+top: 85px;
+left: 220px;
+color: #565353;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+}
+
+.textGC {
+position: absolute;
+top: 85px;
+left: 330px;
+color: #81C8CE;
+font-family: Roboto;
+font-weight: bold;
+font-style: italic;
+font-size: 13px;
+}
+
+.text1 {
+position: absolute;
+top: 85px;
+left: 405px;
+color: #565353;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+}
+
+.logout-box {
+position: relative;
+left: 900px;
+top: 10px;
+max-width: 100%;
+background-color: #F6F6F5;
+width: 150px;
+height: 40px;
+
+}
+.username {
+position: relative;
+left: 20px;
+top: 5px;
+color: #000000;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 12px;
+
+}
+
+.user-status {
+position: relative;
+left: 20px;
+top: -5px;
+color: #18BBD5;
+font-family: Roboto;
+font-weight: bold; 
+font-size: 8px;
+
+}
+
+.img {
+position: relative;
+top: -34px;
+left: 15px;
+
+}
+
+.img-sort {
+position: absolute;
+top: 43px;
+left: 1030px;
+}
+
+.group {
+position: relative;
+top: 80px;
+left: -145px;
+color: #837B7B;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+
+}
+
+.leader{
+position: relative;
+top: 100px;
+left: -145px;
+color: #837B7B;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+
+}
+
+.asstgroupleader {
+position: relative;
+top: 120px;
+left: -145px;
+color: #837B7B;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px;
+
+}
+
+.group-box {
+position: relative;
+left: 40px;
+top: -15px;
+background-color: #FFFFFF;
+width: 250px;
+height: 30px;
+cursor: pointer;
+
+}
+
+.leader-box {
+position: relative;
+left: 0px;
+top: 20px;
+background-color: #FFFFFF;
+width: 250px;
+height: 30px;
+cursor: pointer;
+
+}
+
+.asstgroupleader-box {
+position: relative;
+left: 0px;
+top: 25px;
+background-color: #FFFFFF;
+width: 250px;
+height: 30px;
+cursor: pointer;
+
+}
+
+.groupcode {
+position: relative;
+top: 8px;
+left: 18px;
+color: #837B7B;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold;
+font-size: 13px;
+
+}
+
+.groupleader {
+position: relative;
+top: 8px;
+left: 18px;
+color: #837B7B;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold;
+font-size: 13px;
+
+}
+
+.groupassistant {
+position: relative;
+top: 8px;
+left: 18px;
+color: #837B7B;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold;
+font-size: 13px;
+
+}
+
+.save {
+position: absolute;
+top: px;
+left: 60px;
+color: #FFFFFF;
+font-family: Roboto;
+font-weight:bold;
+font-size: 13px; 
+}
+
+.save-button {             /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+position: absolute;
+left: 600px;
+top: 550px;
+background-color: #81C8CE;
+width: 200px;
+height: 40px;
+ 
+}
+.save-button:hover {   /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+position: absolute;
+left: 600px;
+top: 550px;
+background-color: DodgerBlue;
+cursor: pointer;
+width: 200px;
+height: 40px;
+
+}
+/* Dropdown */
+.dropdown{
+left: 30px;
+}
+
+#img-sort {
+position: absolute;
+top: 43px;
+left: 1030px;
+}
+
+.logout-box {
+position: relative;
+left: 900px;
+top: 10px;
+background-color: #F6F6F5;
+width: 150px;
+height: 40px;
+
+}
+
+.dropdown{
+left: 30px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+left: 900px;
+top: 65px;
+background-color: #F6F6F5;
+min-width: 150px;
+overflow: auto;
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+font-size: 12px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown a:hover {
+background-color: #FF5A74;
+}
+
+.show {
+display: block;
+}
+
+.group-name {        /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+position: relative;
+top: 60px;
+left: 220px;
+font-family: Roboto;
+font-weight: bold;
+font-size: 13px;
+color: #837B7B;
+}
+
+.custom-select {    /*dari sini sampai CSS CODE ENDED ++++++++++++++++++++++++++++++++++++*/
+position: relative;
+top: 11px;
+left: 440px;
+font-family: Roboto;
+font-style: italic;
+font-weight: bold;
+font-size: 13px;
+color: #837B7B;
+}
+
+.custom-select select {
+display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+background-color: #fefefe;
+
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+position: absolute;
+content: "";
+top: 14px;
+right: 10px;
+width: 0;
+height: 0;
+border: 6px solid transparent;
+border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+color:  #81C8CE;
+font-weight: bold;
+padding: 8px 16px;
+border: 1px solid transparent;
+border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+cursor: pointer;
+user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+position: absolute;
+background-color: #fefefe;
+top: 100%;
+left: 0;
+right: 0;
+z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidenav a.current {      /* THIS ONE UNTUK HIGHLIGHT CURRENT PAGE ++++++++++++++++++++++++++++++++++++++++*/
+color: #FF5A74;
+font-weight: bold;
+background-color: #F6F6F5;
+
+} 

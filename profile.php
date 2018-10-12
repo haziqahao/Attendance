@@ -42,43 +42,49 @@ include('function.php');
                     <p class='status'>Status</p>
                     <p class='student'>".$user['role']."</p>   
 
+                <div class='userbox'> 
+                    <p class='userstudent'>&nbsp;&nbsp;Username&nbsp;&nbsp;</p>
+                    <p>".$user['username']."</p>   
+                </div>
+                
+                <div class='B'>
                     <div class='userbox'> 
-                        <p class='userstudent'>&nbsp;&nbsp;Username&nbsp;&nbsp;</p> 
-                        <input class='box' type='text' name='text'>  
+                        <p class='userstudent'>&nbsp;&nbsp;Fullname&nbsp;&nbsp;</p>
+                        <p>".$user['name']."</p>   
                     </div>
-                    
-                    <div class='B'>
-                        <div class='userbox'> 
-                            <p class='userstudent'>&nbsp;&nbsp;Fullname&nbsp;&nbsp;</p>
-                            <p>".$user['name']."</p>   
-                        </div>
-                    </div>
+                </div>";
+            }
+        ?>
 
-                    <div class='copy'>
-                        <p class='status'>GroupCode</p>
-                        <p class='student'>".$user['code']."</p>
-                    </div>
+        <?php   
+            if($_SESSION['role'] == "student"){
+            echo"
+                <div class='copy'>
+                    <p class='status'>Student Id</p>
+                    <p class='student'>".$user['code']."</p>
+                </div>
+            ";
+            }
+        ?>    
 
-                    <div class='copy1'>
-                        <p class='status'>ID</p>
-                        <p class='student'>DiICT(INS)/06/16/0001</p>
+        <?php
+            foreach($run_query as $user){
+                echo"
+                <div class='C'>
+                    <div class='userbox'> 
+                        <p class='userstudent'>&nbsp;&nbsp;Email&nbsp;&nbsp;</p>
+                        <p>".$user['email']."</p>   
                     </div>
+                </div>
 
-                    <div class='C'>
-                        <div class='userbox'> 
-                            <p class='userstudent'>&nbsp;&nbsp;Email&nbsp;&nbsp;</p>
-                            <p>".$user['email']."</p>   
-                        </div>
-                    </div>
-
-                    <div class='D'>
+                <div class='D'>
                         <div class='userbox'> 
                             <p class='userstudent'>&nbsp;&nbsp;Password&nbsp;&nbsp;</p>   
                         </div>
                     </div>
 
-                    <div class='save-btn'>
-                        <p class='save'>Save Changes</p>
+                    <div class='edit-btn'>
+                        <p class='edit'>Edit Profile</p>
                     </div>
                 </div>";
             }

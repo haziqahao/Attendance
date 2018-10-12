@@ -21,8 +21,8 @@ include('function.php');
     <body>
         <!-- Side Navigation -->
         <?php
-            include('sidenav.php')
-        ?>
+            include('sidenav.php');
+        ?> 
 
         <!-- Top header -->
         <?php 

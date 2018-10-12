@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 06, 2018 at 05:27 AM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Host: 127.0.0.1
+-- Generation Time: Oct 11, 2018 at 05:27 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -63,8 +63,7 @@ CREATE TABLE `attendance_status` (
 --
 
 INSERT INTO `attendance_status` (`id`, `user_id`, `status`, `attendance_id`, `remarks`) VALUES
-(1, 1, 'absent', 3, 'no mc letter'),
-(2, 23, 'present', 1, '');
+(1, 1, 'absent', 3, 'no mc letter');
 
 -- --------------------------------------------------------
 
@@ -163,17 +162,6 @@ CREATE TABLE `gl` (
   `user_id` int(20) NOT NULL,
   `group_id` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `gl`
---
-
-INSERT INTO `gl` (`id`, `user_id`, `group_id`) VALUES
-(1, 23, 2),
-(2, 16, 4),
-(3, 5, 1),
-(4, 17, 3),
-(5, 8, 5);
 
 -- --------------------------------------------------------
 
@@ -365,7 +353,8 @@ INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `role`, `code
 (31, ' Haji Si-Ramlee Haji Serudin', 'haji.siramlee@pb.edu.bn', 'hajisiramlee', '12345', 'module lecturer', NULL),
 (32, 'Bahit Hamid', 'bahit.hamid@pb.edu.bn', 'bahithamid', '12345', 'module lecturer', NULL),
 (33, 'Suok Leng Hii', 'suok.leng.hii@pb.edu.bn', 'suoklenghii', '12345', 'module lecturer', NULL),
-(34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'Module Lecturer', '');
+(34, 'Siti Nur\'Afifah binti Sait', 'afifah.sait@pb.edu.bn', 'afifahsait', '12345', 'Module Lecturer', ''),
+(35, 'admin', 'admin@pb.edu.bn', 'admin123', '12345', 'admin', NULL);
 
 --
 -- Indexes for dumped tables
@@ -548,7 +537,7 @@ ALTER TABLE `statistic`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- Constraints for dumped tables

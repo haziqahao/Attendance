@@ -1,4 +1,4 @@
-<?php require('dbconfig.php'); ?>
+<?php require('function.php'); ?>
 
 <!doctype html>
 <html>
@@ -34,7 +34,7 @@
                 <img src="img/campus.png" width="800px" >
             </div>
 
-            <form method="POST">
+            <form method="POST" action="log.php">
 
             <div class="form u">    
          	<input type="text" id="username"  name="username" class="control" placeholder="Username" required>
@@ -51,39 +51,7 @@
             <p class="text-f">Forgot Password? <a href="forgot_password.php" class="text-c">Click here</a></p>
             </form>
 
-        </div> 
-
-        <?php
-            if(isset($_POST['submit'])){
-
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-                
-                $user_query = dbConnection()->prepare('SELECT username, password FROM user WHERE username = :username');
-                $user_query->execute(array(
-                    ':username' => $username
-                    ));
-                $data = $user_query->fetch(PDO::FETCH_ASSOC);
-                
-                
-                if($username != $data['username']) {
-                    echo "User does not exist!";
-                } else if($password == $data['password']) {
-                    if($username == 'admin@pb.edu.bn'){
-                        $_SESSION['username'] = $data['username'];
-                        $_SESSION['password'] = $data['password'];
-                        header('Location: dashboard.php');
-                    } else {
-                      session_start();
-                        $_SESSION['username'] = $data['username'];
-                        $_SESSION['password'] = $data['password'];
-                        header('Location: dashboard.php');
-                    }
-                } else {
-                    echo "Incorrect Password! Please try again.";
-                } 
-            }
-        ?>   
-    </div
+        </div>    
+    </div>
     </body>
 </html>
