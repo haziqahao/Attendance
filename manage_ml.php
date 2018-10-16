@@ -532,7 +532,7 @@
         </div>
 
         <div class="group-name">
-            <h4>Module Lecturer</h4>
+            <h4>Lecturer Name</h4>
         </div>
                    
         <div class="custom-select" style="width: 200px;">
